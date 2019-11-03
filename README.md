@@ -49,6 +49,13 @@ Current build status
                   <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/libpython-feedstock?branchName=master&jobName=win&configuration=win_python3.7" alt="variant">
                 </a>
               </td>
+            </tr><tr>
+              <td>win_python3.8</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=8319&branchName=master">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/libpython-feedstock?branchName=master&jobName=win&configuration=win_python3.8" alt="variant">
+                </a>
+              </td>
             </tr>
           </tbody>
         </table>

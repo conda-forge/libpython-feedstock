@@ -7,7 +7,7 @@ build:
   skip: true  # [not win]
 
 requirements:
-  build:
+  host:
     - python
     - m2w64-toolchain
   run:

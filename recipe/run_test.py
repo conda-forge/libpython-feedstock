@@ -6,7 +6,9 @@ for kv in os.environ.items():
 
 print('CWD:', os.getcwd())
 print('sys.prefix:', sys.prefix)
-print('Pointer size:', tuple.__itemsize__)
+if hasattr(tuple, "__itemsize__"):
+    # This is a cpython implementation detail and not available in PyPy
+    print('Pointer size:', tuple.__itemsize__)
 
 from distutils.core import setup
 from distutils.extension import Extension

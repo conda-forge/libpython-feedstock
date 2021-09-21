@@ -22,8 +22,9 @@ test:
     - spam.c
 
 about:
-  license: Other
-  license_family: Other
+  home: https://github.com/conda-forge/libpython-feedstock
+  license: BSD-3-Clause
+  license_file: LICENSE.txt
   summary: A mingw-w64 import library for python??.dll (on Windows)
 
 extra:

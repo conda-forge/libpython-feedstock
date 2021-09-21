@@ -22,4 +22,4 @@ if errorlevel 1 exit 1
 echo compiler=mingw32     >> %PREFIX%\Lib\distutils\distutils.cfg
 if errorlevel 1 exit 1
 
-copy %PREFIX%\Lib\distutils\distutils.cfg %PREFIX%\Lib\site-packages\setuptools\distutils\
+copy %PREFIX%\Lib\distutils\distutils.cfg %PREFIX%\Lib\site-packages\setuptools\_distutils\

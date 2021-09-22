@@ -1,17 +1,19 @@
 package:
   name: libpython
-  version: 2.0
+  version: 2.1
 
 build:
-  number: 1
+  number: 0
   skip: true  # [not win]
 
 requirements:
   host:
     - python
     - m2w64-toolchain
+    - setuptools
   run:
     - python
+    - setuptools
 
 test:
   requires:
@@ -20,10 +22,12 @@ test:
     - spam.c
 
 about:
-  license: Other
-  license_family: Other
+  home: https://github.com/conda-forge/libpython-feedstock
+  license: BSD-3-Clause
+  license_file: LICENSE.txt
   summary: A mingw-w64 import library for python??.dll (on Windows)
 
 extra:
   recipe-maintainers:
     - chrisburr
+    - isuruf

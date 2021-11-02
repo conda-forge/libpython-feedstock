@@ -1,9 +1,9 @@
 About libpython
 ===============
 
-Home: 
+Home: https://github.com/conda-forge/libpython-feedstock
 
-Package license: Other
+Package license: BSD-3-Clause
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/libpython-feedstock/blob/master/LICENSE.txt)
 
@@ -27,10 +27,10 @@ Current build status
         <table>
           <thead><tr><th>Variant</th><th>Status</th></tr></thead>
           <tbody><tr>
-              <td>win_64_python3.6.____cpython</td>
+              <td>win_64_python3.10.____cpython</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=8319&branchName=master">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/libpython-feedstock?branchName=master&jobName=win&configuration=win_64_python3.6.____cpython" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/libpython-feedstock?branchName=master&jobName=win&configuration=win_64_python3.10.____cpython" alt="variant">
                 </a>
               </td>
             </tr><tr>
@@ -163,4 +163,5 @@ Feedstock Maintainers
 =====================
 
 * [@chrisburr](https://github.com/chrisburr/)
+* [@isuruf](https://github.com/isuruf/)
 

@@ -4,8 +4,13 @@ ar cru %PREFIX%\libs\libmsvcr140.dll.a
 ar cru %PREFIX%\libs\libucrt.dll.a
 ar cru %PREFIX%\libs\libvcruntime140.dll.a
 
-gendef.exe %PREFIX%\python%CONDA_PY%.dll - > python%CONDA_PY%.def
-if errorlevel 1 exit 1
+if %python_impl% == "pypy" (
+  gendef.exe %PREFIX%\pypy3-c.dll - > python%CONDA_PY%.def
+  if errorlevel 1 exit 1
+else (
+  gendef.exe %PREFIX%\python%CONDA_PY%.dll - > python%CONDA_PY%.def
+  if errorlevel 1 exit 1
+)
 dlltool.exe -d python%CONDA_PY%.def -l %PREFIX%\libs\libpython%CONDA_PY%.dll.a
 if errorlevel 1 exit 1
 if not exist %PREFIX%\Lib\distutils\ mkdir %PREFIX%\Lib\distutils\

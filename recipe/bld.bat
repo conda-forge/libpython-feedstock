@@ -4,7 +4,7 @@ ar cru %PREFIX%\libs\libmsvcr140.dll.a
 ar cru %PREFIX%\libs\libucrt.dll.a
 ar cru %PREFIX%\libs\libvcruntime140.dll.a
 
-if %python_impl% == "pypy" (
+if "%python_impl%" == "pypy" (
   gendef.exe %PREFIX%\pypy3-c.dll - > python%CONDA_PY%.def
   if errorlevel 1 exit 1
 ) else (

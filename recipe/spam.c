@@ -4,6 +4,9 @@
 #define IS_PY3K
 #endif
 
+#ifndef __MINGW64__
+#error
+#endif
 
 static PyObject *
 spam_sqr(PyObject *self, PyObject *args)

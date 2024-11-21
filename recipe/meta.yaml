@@ -1,15 +1,14 @@
 package:
-  name: libpython
-  version: 2.2
+  name: distutils-activate-mingw
+  version: 2.3
 
 build:
-  number: 3
+  number: 4
   skip: true  # [not win]
 
 requirements:
   host:
     - python
-    - m2w64-toolchain
     - setuptools
   run:
     - python
@@ -17,9 +16,16 @@ requirements:
 
 test:
   requires:
-    - m2w64-toolchain
+    - gcc_{{ target_platform }}
   files:
     - spam.c
+
+outputs:
+  - name: distutils-activate-mingw
+
+  - name: libpython
+    requirements:
+      - distutils-activate-mingw
 
 about:
   home: https://github.com/conda-forge/libpython-feedstock
@@ -28,6 +34,7 @@ about:
   summary: A mingw-w64 import library for python??.dll (on Windows)
 
 extra:
+  feedstock-name: libpython
   recipe-maintainers:
     - chrisburr
     - isuruf

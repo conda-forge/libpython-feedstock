@@ -14,18 +14,18 @@ requirements:
     - python
     - setuptools
 
+test:
+  requires:
+    - gcc_{{ target_platform }}
+  files:
+    - spam.c
+
 outputs:
   - name: distutils-activate-mingw
 
   - name: libpython
     requirements:
       - distutils-activate-mingw
-
-test:
-  requires:
-    - gcc_{{ target_platform }}
-  files:
-    - spam.c
 
 about:
   home: https://github.com/conda-forge/libpython-feedstock

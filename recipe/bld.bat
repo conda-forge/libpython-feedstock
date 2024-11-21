@@ -1,4 +1,4 @@
-echo "setting distutils cfg"
+echo "setting distutils cfg in %PREFIX%"
 if not exist %PREFIX%\Lib\distutils\ mkdir %PREFIX%\Lib\distutils\
 if errorlevel 1 exit 1
 dir %PREFIX%\Lib\distutils\

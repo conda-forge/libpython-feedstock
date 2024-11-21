@@ -1,6 +1,6 @@
 package:
-  name: libpython
-  version: 2.2
+  name: distutils-activate-mingw
+  version: 2.3
 
 build:
   number: 4
@@ -9,15 +9,21 @@ build:
 requirements:
   host:
     - python
-    - m2w64-toolchain
     - setuptools
   run:
     - python
     - setuptools
 
+outputs:
+  - name: distutils-activate-mingw
+
+  - name: libpython
+    requirements:
+      - distutils-activate-mingw
+
 test:
   requires:
-    - m2w64-toolchain
+    - gcc_{{ target_platform }}
   files:
     - spam.c
 
@@ -28,6 +34,7 @@ about:
   summary: A mingw-w64 import library for python??.dll (on Windows)
 
 extra:
+  feedstock-name: libpython
   recipe-maintainers:
     - chrisburr
     - isuruf

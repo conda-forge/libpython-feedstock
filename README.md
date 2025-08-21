@@ -55,10 +55,10 @@ Current build status
                 </a>
               </td>
             </tr><tr>
-              <td>win_64_python3.9.____cpython</td>
+              <td>win_64_python3.14.____cp314</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=8319&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/libpython-feedstock?branchName=main&jobName=win&configuration=win%20win_64_python3.9.____cpython" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/libpython-feedstock?branchName=main&jobName=win&configuration=win%20win_64_python3.14.____cp314" alt="variant">
                 </a>
               </td>
             </tr>
@@ -74,6 +74,7 @@ Current release info
 
 | Name | Downloads | Version | Platforms |
 | --- | --- | --- | --- |
+| [![Conda Recipe](https://img.shields.io/badge/recipe-distutils--activate--mingw-green.svg)](https://anaconda.org/conda-forge/distutils-activate-mingw) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/distutils-activate-mingw.svg)](https://anaconda.org/conda-forge/distutils-activate-mingw) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/distutils-activate-mingw.svg)](https://anaconda.org/conda-forge/distutils-activate-mingw) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/distutils-activate-mingw.svg)](https://anaconda.org/conda-forge/distutils-activate-mingw) |
 | [![Conda Recipe](https://img.shields.io/badge/recipe-libpython-green.svg)](https://anaconda.org/conda-forge/libpython) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/libpython.svg)](https://anaconda.org/conda-forge/libpython) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/libpython.svg)](https://anaconda.org/conda-forge/libpython) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/libpython.svg)](https://anaconda.org/conda-forge/libpython) |
 
 Installing libpython
@@ -86,41 +87,41 @@ conda config --add channels conda-forge
 conda config --set channel_priority strict
 ```
 
-Once the `conda-forge` channel has been enabled, `libpython` can be installed with `conda`:
+Once the `conda-forge` channel has been enabled, `distutils-activate-mingw, libpython` can be installed with `conda`:
 
 ```
-conda install libpython
-```
-
-or with `mamba`:
-
-```
-mamba install libpython
-```
-
-It is possible to list all of the versions of `libpython` available on your platform with `conda`:
-
-```
-conda search libpython --channel conda-forge
+conda install distutils-activate-mingw libpython
 ```
 
 or with `mamba`:
 
 ```
-mamba search libpython --channel conda-forge
+mamba install distutils-activate-mingw libpython
+```
+
+It is possible to list all of the versions of `distutils-activate-mingw` available on your platform with `conda`:
+
+```
+conda search distutils-activate-mingw --channel conda-forge
+```
+
+or with `mamba`:
+
+```
+mamba search distutils-activate-mingw --channel conda-forge
 ```
 
 Alternatively, `mamba repoquery` may provide more information:
 
 ```
 # Search all versions available on your platform:
-mamba repoquery search libpython --channel conda-forge
+mamba repoquery search distutils-activate-mingw --channel conda-forge
 
-# List packages depending on `libpython`:
-mamba repoquery whoneeds libpython --channel conda-forge
+# List packages depending on `distutils-activate-mingw`:
+mamba repoquery whoneeds distutils-activate-mingw --channel conda-forge
 
-# List dependencies of `libpython`:
-mamba repoquery depends libpython --channel conda-forge
+# List dependencies of `distutils-activate-mingw`:
+mamba repoquery depends distutils-activate-mingw --channel conda-forge
 ```
 
 

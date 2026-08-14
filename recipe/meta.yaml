@@ -1,9 +1,9 @@
 package:
   name: distutils-activate-mingw
-  version: 2.3
+  version: "2.3"
 
 build:
-  number: 6
+  number: 7
   skip: true  # [not win]
   python_version_independent: true
 
@@ -20,13 +20,6 @@ test:
     - gcc_{{ target_platform }}
   files:
     - spam.c
-
-outputs:
-  - name: distutils-activate-mingw
-
-  - name: libpython
-    requirements:
-      - distutils-activate-mingw
 
 about:
   home: https://github.com/conda-forge/libpython-feedstock
